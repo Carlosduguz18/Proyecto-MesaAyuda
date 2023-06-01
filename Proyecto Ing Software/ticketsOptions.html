@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas Digilab</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="contenedor-opciones">
+
+        <header class="header-opciones">
+
+            <img class="avatar" src="./img/Logo.png" alt="Logo de Digilab">
+
+        </header>
+          
+        <main class="main-opciones">
+
+            <h2>Bienvenido aquí te muestro las opciones para facilitar tus consultas o pedidos</h2>
+
+            <div class="botones-opciones">
+
+                <button class="boton-opcion" onclick="mostrarFormulario()">Deseo un nuevo SISTEMA</button>
+                <button class="boton-opcion" onclick="mostrarFormulario()">Deseo realizar un mantenimiento en la BASE DE DATOS</button>
+                <button class="boton-opcion" onclick="mostrarFormulario()">Se cayó mi SISTEMA</button>
+                <button class="boton-opcion" onclick="mostrarFormulario()">Deseo realizar unos cambios a mi PÁGINA WEB</button>
+                <button class="boton-opcion" onclick="mostrarFormulario()">Deseo crear una FACTURACIÓN ONLINE</button>
+                <button class="boton-opcion" onclick="mostrarFormulario()">Otros ...</button>
+
+            </div>
+
+            <div id="contenedor-formulario" class="hidden"></div>
+
+        </main>
+
+    </div>
+
+
+    <script src="./js/formulario.js"></script>
+</body>
+</html>

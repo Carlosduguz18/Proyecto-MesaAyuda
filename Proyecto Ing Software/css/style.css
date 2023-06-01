@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&display=swap');
+
+
+/*ESTILOS DE LA PÁGINA LOGIN*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor .avatar{
+    width: 350px;
+    height: 125px;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+    margin-top: 100px;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #410b99;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box .avatar{
+    width: 300px;
+    height: 100px;
+    border-radius: 30%;
+}
+
+.form-box .logo-user{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*.form-box h2{
+    font-size: 3em;
+    color: #410b99;
+    text-align: center;
+}*/
+
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 10px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #0d7e6f;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #410b99;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #410b99;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+/*ESTILOS DE LA PÁGINA OPCIONES*/
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.header-opciones {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+  
+.main-opciones {
+    width: 90%;
+    height: 70vh;
+    display: column;
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+}
+
+.main-opciones h2{
+    margin-top: -20px;
+}
+
+.botones-opciones{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.boton-opcion {
+    width: 50%;
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 20px;
+    /*background-color: #410b99;*/
+    border: 2px solid black;
+    /*color: #fff;*/
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*ESTILOS SOBRE LOS FORMULARIOS DE LOS REQUERIMIENTOS*/
+
+
+
+.hidden{
+    display: none;
+}
+  
+.contenedor-formulario{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    background-color: #ccc;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    padding: 0px;
+}
+  
+.form-formulario{
+    width: 800px;
+    margin: 0 auto;
+}
+  
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+  
+.form-colum{
+    width: 48%;
+}
+  
+.form-colum label{
+    display: block;
+    margin-bottom: 10px;
+    text-align: start;
+    font-weight: 500;
+}
+  
+.form-colum input,
+.form-colum input[type="text"],
+.form-colum input[type="email"],
+.form-colum textarea{
+    width: 70%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.form-colum textarea{
+    height: 80px;
+}
+
+.form-colum select,
+.form-colum [type="date"]{
+    width: 50%;
+}
+
+.button-row{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+  
+.form-formulario button{
+    display: block;
+    margin: 20px auto;
+    background-color: #410b99;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*ESTILOS SOBRE LAS TABLAS DE LOS TICKETS GENERADOS*/
+
+
+.contenedor-dashboard{
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #AE2BFF, #1BDDA2);
+}
+
+.header-dashboard{
+    padding: 20px;
+    background-color: #ccc;
+    opacity: 0.7;
+}
+
+.title-dashboard{
+    margin: 0;
+    color: #333;
+}
+
+.dashboard{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.list-ticket{
+    height: 70vh;
+    flex-basis: calc(33.33% - 20px);
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 4px;
+    margin: auto 20px;
+}
+  
+.list-title{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+  
+.ticket-card{
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.ticket-content{
+    font-weight: bold;
+}
+  
+  
+  
+  
+  

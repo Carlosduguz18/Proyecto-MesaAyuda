@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Digilab</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+
+        <form class="form-formulario" id="form-formulario-id">
+
+            <div class="form-row">
+
+                <div class="form-colum">
+
+                    <div class="form-row">
+                        <label for="nombre-usuario">Nombre:</label>
+                        <input type="text" id="name-user">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="nombre-proyecto">Proyecto:</label>
+                        <input type="text" id="name-project">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="affair">
+                    </div>
+                    <div class="form-row">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="description"></textarea>
+                    </div>
+
+                </div>
+                
+                <div class="form-colum">
+
+                    <div class="form-row">
+                        <label for="prioridad">Prioridad:</label>
+                        <select id="priority">
+                            <option value="">Seleccionar prioridad</option>
+                            <option value="low">Baja</option>
+                            <option value="half">Media</option>
+                            <option value="high">Alta</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="tipo">Tipo de requerimiento:</label>
+                        <select id="type">
+                            <option value="">Seleccionar tipo de requerimiento</option>
+                            <option value="new-software">Solicitud de nuevo software</option>
+                            <option value="technical-problem">Problema técnico</option>
+                            <option value="access-request">Solicitud de acceso</option>
+                            <!-- Agrega más opciones según tus necesidades -->
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="fecha">Fecha límite:</label>
+                        <input type="date" id="dead-line">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="departamento">Departamento </br> /Equipo:</label>
+                        <select id="departament">
+                            <option value="">Seleccionar departamento/equipo</option>
+                            <option value="departament1">Departamento 1</option>
+                            <option value="departament2">Departamento 2</option>
+                            <option value="departament3">Departamento 3</option>
+                            <!-- Agrega más opciones según tus necesidades -->
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="otros">Otros detalles:</label>
+                        <textarea id="others"></textarea>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="button-row">
+                <button type="submit">Generar Ticket</button>
+                <button type="button" id="cancelar-btn" onclick="cancelarTicket()">Cancelar</button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <script src="./js/formulario.js"></script>
+    <script src="/js/tickets.js" type="module"></script>
+</body>
+</html>
