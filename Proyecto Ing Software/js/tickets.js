@@ -1,44 +1,25 @@
 // import { nameUser } from "./formulario"
+window.addEventListener("DOMContentLoaded", function() {
+  var existingTickets = JSON.parse(localStorage.getItem("tickets")) || []
 
-window.addEventListener('DOMContentLoaded', function() {
-    // Obtener los parámetros de URL
-    // var urlParams = new URLSearchParams(window.location.search);
-    var affair = "Deseo realizar un mantenimiento en la base de datos"
-    var nameTable = "Backup"
-    var dateLine = "01/06/2023"
-    var client = "Carlos Dueñas"
-    var nameProject = "Mantenimiento de la base de datos"
-    var priority = "Urgente"
-    var description = "Se cayó la base de datos por cierta cuestión que pasó .."
+  existingTickets.forEach(function(ticket) {
+    var ticketElement = document.createElement("div")
+    ticketElement.classList.add("ticket")
+    ticketElement.innerHTML = `
+      <label for="cliente">Cliente</label>
+      <label for="clienteLabel">${ticket.nameUser}</label>
 
-  
-    if (affair && nameTable && dateLine && client && nameProject && priority && description) {
-      // Crear un card con los datos del formulario
-      var ticket = document.createElement('div')
-      ticket.classList.add('ticket')
-      ticket.innerHTML = `
-        <label for="asuntoInput">${affair}</label> <br><br>
-      
-        <label for="tablaInput">${nameTable}</label> <br><br>
-      
-        <label for="fechaInput">Fecha de Solicitud</label>
-        <label for="fechaInput">${dateLine}</label><br><br>
-      
-        <label for="clienteInput">Cliente</label>
-        <label for="clienteInput">${client}</label><br><br>
-      
-        <label for="proyectoInput">Proyecto</label>
-        <label for="proyectoInput">${nameProject}</label><br><br>
-      
-        <label for="prioridadInput">Prioridad</label>
-        <label for="prioridadInput">${priority}</label><br><br>
-      
-        <label for="descripcionInput">Descripción del ticket</label>
-        <textarea id="descripcionInput" placeholder="Descripción del ticket">${description}</textarea>
-      `
-  
-      // Agregar el card a la primera tabla
-      var backlogTicket = document.getElementById('backlog-ticket')
-      backlogTicket.appendChild(ticket)
-    }
+      <label for="proyecto">Proyecto</label>
+      <label for="proyectoLabel">${ticket.nameProject}</label>
+
+      <label for="prioridad">Prioridad</label>
+      <label for="prioridadLabel">${ticket.priority}</label>
+
+      <label for="descripcion">Descripción</label>
+      <label for="prioridadLabel">${ticket.description}</label>
+    `
+
+    var backlogTicket = document.getElementById("backlog-ticket")
+    backlogTicket.appendChild(ticketElement)
   })
+})

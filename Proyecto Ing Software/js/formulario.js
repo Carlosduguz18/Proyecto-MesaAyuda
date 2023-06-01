@@ -30,6 +30,23 @@ function mostrarFormulario() {
                 var departament = document.getElementById("departament").value
                 var others = document.getElementById("others").value
 
+                // Almacenar los valores en localStorage
+                var ticket = {
+                    nameUser: nameUser,
+                    email: email,
+                    nameProject: nameProject,
+                    affair: affair,
+                    description: description,
+                    priority: priority,
+                    type: type,
+                    deadLine: deadLine,
+                    departament: departament,
+                    others: others
+                };
+                var existingTickets = JSON.parse(localStorage.getItem("tickets")) || []
+                existingTickets.push(ticket)
+                localStorage.setItem("tickets", JSON.stringify(existingTickets))
+
                 if (nameUser && email && nameProject && affair && description && priority && type && deadLine && departament) {
                     window.location.href = 'backupTickets.html'
                 }
