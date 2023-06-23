@@ -331,6 +331,18 @@
 }
 
 
+/*CLASES PARA ESTILOS EN LOS DIFERENTES ESTADOS DEL DRAG AND DROP*/
+
+
+/*.ticket-card.selection{
+    transform: scale(1.02) rotate(-1deg);
+    box-shadow: 0px 0px 20px rgba(149, 153, 159, .16);
+}
+
+.ticket-card.drag{
+    background: black;
+}*/
+
 
 
 
@@ -360,10 +372,12 @@
     margin: 50px;
     display: flex;
     justify-content: space-between;
+    height: auto;
 }
   
 .list-ticket{
-    height: 70vh;
+    height: 80vh;
+    overflow-y: auto;
     flex-basis: calc(33.33% - 20px);
     background-color: #444654;
     padding: 20px;
@@ -404,7 +418,10 @@
     margin-bottom: 10px;
     border-bottom: 2px solid #aeb4d4;
 }
-  
+
+.droppable{
+    border: 2px dashed gray;
+}
   
   
   

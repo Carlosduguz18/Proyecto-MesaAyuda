@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backup Tickets Digilab</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.13.0"></script>
 </head>
 <body>
     
@@ -19,33 +20,33 @@
 
         </header>
 
-        <div class="dashboard" id="dashboard">
+        <div class="dashboard">
 
             <div class="list-ticket">
 
                 <h2 class="list-title">Backlog 🟣</h2>
-                <div class="ticket-card" id="backlog-ticket" draggable="true"></div>
+                <div class="ticket-card" id="dashboard1"></div>
 
             </div>
 
-            <div class="list-ticket">
+            <div class="list-ticket" id="dashboard2">
 
                 <h2 class="list-title">Urgente 🔴</h2>
-                <div class="ticket-card" draggable="true"></div>
+                <div class="ticket-card"></div>
 
             </div>
 
-            <div class="list-ticket">
+            <div class="list-ticket" id="dashboard3">
 
                 <h2 class="list-title">En proceso 🟡</h2>
-                <div class="ticket-card" draggable="true"></div>
+                <div class="ticket-card"></div>
 
             </div>
 
-            <div class="list-ticket">
+            <div class="list-ticket" id="dashboard4">
 
                 <h2 class="list-title">Finalizado 🟢</h2>
-                <div class="ticket-card"draggable="true"></div>
+                <div class="ticket-card"></div>
 
             </div>
 
@@ -54,9 +55,9 @@
     </div>
 
 
-
     <script src="./js/formulario.js" type="module"></script>
     <script src="./js/tickets.js" type="module"></script>
+    <script src="./js/dragDrop.js" type="module"></script>
 
 </body>
 </html>
