@@ -12,7 +12,7 @@ form.addEventListener("submit", e=>{
         Swal.fire({
             html: `<h2 style="color: black;">Buen día ${usuario}!</h2><br/><h2>DIGILAB TE DA LA BIENVENIDA 🎉</h2><br/>
                     <a href="#">¿En qué podemos ayudarte el día de hoy?</a>`,
-            width: '35%',
+            width: '90%',
             padding: '1.5rem',
             allowOutsideClick: false,
             allowEscapeKey: false,
@@ -22,9 +22,13 @@ form.addEventListener("submit", e=>{
             button: false,
             icon: undefined,
             showConfirmButton: false,
-            background: 'silver',
+            background: '#ccc',
             color: '#000',
             opacity: '0.9',
+            customClass: {
+                content: 'responsive-alert-content',
+                closeButton: 'responsive-alert-close-button',
+            },
         }).then(() => {
             window.location.href = "ticketsOptions.html"
         })
@@ -32,7 +36,7 @@ form.addEventListener("submit", e=>{
         Swal.fire({
             html: '<h3>⚠️ Error</h3> <br/> <h3>El usuario o la contraseña no coinciden</h3>',
             icon: 'question',
-            width: '35%',
+            width: '90%',
             allowOutsideClick: false,
             allowEscapeKey: false,
             allowEnterKey: false,
@@ -43,6 +47,10 @@ form.addEventListener("submit", e=>{
             showConfirmButton: false,
             background: '#ccc',
             opacity: '0.9',
+            customClass: {
+                content: 'responsive-alert-content',
+                closeButton: 'responsive-alert-close-button',
+            },
           })
   }
 

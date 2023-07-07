@@ -24,7 +24,7 @@
 .contenedor .avatar{
     width: 400px;
     height: 120px;
-    margin-left: 30px;
+    margin-left: 10px;
     background-size: cover;
     position: absolute;
     left: 0;
@@ -181,7 +181,25 @@
 }
 
 
+/* Estilos responsivos para la alerta */
 
+.responsive-alert-container{
+    max-width: 100% !important;
+    width: auto !important;
+    left: 10% !important;
+    right: 10% !important;
+    border-radius: 20px !important;
+}
+  
+.responsive-alert-content{
+    padding: 1rem !important;
+}
+  
+.responsive-alert-close-button{
+    right: 10px !important;
+    top: 10px !important;
+    color: #ff0000 !important;
+}
 
 
 
