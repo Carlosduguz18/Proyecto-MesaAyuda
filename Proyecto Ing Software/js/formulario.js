@@ -64,6 +64,10 @@ function cancelarTicket() {
     contenedorFormulario.classList.add("hidden")
 }
 
+document.getElementById("nextButton").addEventListener("click", function() {
+    window.location.href = "backupTickets.html";
+});
+
 /*function obtenerUsuario() {
     var userLogin = document.getElementById("user").value
     return userLogin

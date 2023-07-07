@@ -199,7 +199,6 @@
 }
 
 .contenedor-opciones{
-    height: 100vh;
     background-image: url("../img/Fondo-Pagina.jpeg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -212,25 +211,30 @@
 }
   
 .main-opciones {
-    width: 90%;
-    height: 70vh;
+    width: 60%;
+    height: 83vh;
     display: column;
     text-align: center;
     padding: 50px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-opciones h2{
     margin-top: -20px;
+    font-size: 30px;
 }
 
 .botones-opciones{
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .boton-opcion {
-    width: 50%;
+    width: 40%;
     display: inline-block;
     margin: 10px;
     padding: 15px 20px;
@@ -239,10 +243,38 @@
     /*color: #fff;*/
     color: black;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 13px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(101, 97, 97, 0.5);
+    transition-duration: 0.4s;
 }
+
+.boton-opcion:hover {
+    background-color: #410b99;
+    color: white;
+}
+
+#nextButton {
+    font-size: 16px;
+    border-radius: 13px;
+    border: 1px solid #000;
+    display: inline-block;
+    position: fixed;
+    font-weight: 600;
+    bottom: 20px;
+    left: 20px;
+    text-decoration: none;
+    padding: 7px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button#nextButton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
 
 
 
@@ -258,17 +290,20 @@
 }
   
 .contenedor-formulario{
+    background-image: url("../img/Fondo-Formulario.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -47%);
-    background-color: #ccc;
+    transform: translate(-50%, -27%);
     margin: auto;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     padding: 0px;
+    color: #fff;
 }
   
 .form-formulario{
@@ -354,18 +389,20 @@
     margin: 0 auto;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, #AE2BFF, #1BDDA2);
+    background-image: url("../img/Fondo-Pagina.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .header-dashboard{
     padding: 20px;
-    background-color: #ccc;
+    background: #410b99;
     opacity: 0.7;
 }
 
 .title-dashboard{
     margin: 0;
-    color: #333;
+    color: #ccc;
 }
 
 .dashboard{
@@ -373,6 +410,7 @@
     display: flex;
     justify-content: space-between;
     height: auto;
+    opacity: 0.9;
 }
   
 .list-ticket{
@@ -388,6 +426,7 @@
 .list-title{
     margin-top: 0;
     margin-bottom: 10px;
+    color:#ccc;
 }
   
 .ticket-card{
@@ -400,9 +439,9 @@
 
 .ticket{
     margin-bottom: 10px;
-    background-color: #ccc;
-    color: #3f414b;
+    background-color: #fff;
     font-size: bold;
+    font-weight: 400;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -416,7 +455,7 @@
 .ticket label[for="prioridadLabel"],
 .ticket label[for="prioridadLabel"]{
     margin-bottom: 10px;
-    border-bottom: 2px solid #aeb4d4;
+    border-bottom: 2px solid #94baec;
 }
 
 .droppable{

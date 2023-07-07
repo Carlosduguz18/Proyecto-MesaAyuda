@@ -10,7 +10,8 @@ form.addEventListener("submit", e=>{
 
     if (usuario === "carlos" && pass === "123456789"){
         Swal.fire({
-            html: `<h2>Buen día ${usuario}!</h2><br/><h2>DIGILAB TE DA LA BIENVENIDA 🎉</h2><br/><a href="#">¿En qué podemos ayudarte el día de hoy?</a>`,
+            html: `<h2 style="color: black;">Buen día ${usuario}!</h2><br/><h2>DIGILAB TE DA LA BIENVENIDA 🎉</h2><br/>
+                    <a href="#">¿En qué podemos ayudarte el día de hoy?</a>`,
             width: '35%',
             padding: '1.5rem',
             allowOutsideClick: false,
@@ -21,6 +22,9 @@ form.addEventListener("submit", e=>{
             button: false,
             icon: undefined,
             showConfirmButton: false,
+            background: 'silver',
+            color: '#000',
+            opacity: '0.9',
         }).then(() => {
             window.location.href = "ticketsOptions.html"
         })
@@ -37,6 +41,8 @@ form.addEventListener("submit", e=>{
             button: false,
             icon: undefined,
             showConfirmButton: false,
+            background: '#ccc',
+            opacity: '0.9',
           })
   }
 

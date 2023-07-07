@@ -6,16 +6,16 @@ window.addEventListener("DOMContentLoaded", function() {
     var ticketElement = document.createElement("div")
     ticketElement.classList.add("ticket")
     ticketElement.innerHTML = `
-      <label for="cliente">Cliente</label>
+      <label for="cliente"><b>Cliente</b></label>
       <label for="clienteLabel">${ticket.nameUser}</label>
 
-      <label for="proyecto">Proyecto</label>
+      <label for="proyecto"><b>Proyecto</b></label>
       <label for="proyectoLabel">${ticket.nameProject}</label>
 
-      <label for="prioridad">Prioridad</label>
+      <label for="prioridad"><b>Prioridad</b></label>
       <label for="prioridadLabel">${ticket.priority}</label>
 
-      <label for="descripcion">Descripción</label>
+      <label for="descripcion"><b>Descripción</b></label>
       <label for="prioridadLabel">${ticket.description}</label>
     `
 
