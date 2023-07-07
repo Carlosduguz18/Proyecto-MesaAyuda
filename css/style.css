@@ -400,6 +400,16 @@ button#nextButton:hover {
     opacity: 0.7;
 }
 
+button#newTicketButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: right;
+}
+
 .title-dashboard{
     margin: 0;
     color: #ccc;
