@@ -323,9 +323,12 @@ button#nextButton:hover {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
     padding: 0px;
     color: #fff;
+    width: 90%;
+    overflow-y: auto;
+    max-width: 800px;
+    max-height: 90vh;
 }
   
 .form-formulario{
@@ -388,18 +391,44 @@ button#nextButton:hover {
 }
 
 
-/*CLASES PARA ESTILOS EN LOS DIFERENTES ESTADOS DEL DRAG AND DROP*/
+/* Estilos responsivos para dispositivos móviles >=880px */
 
+@media screen and (max-width: 880px){
 
-/*.ticket-card.selection{
-    transform: scale(1.02) rotate(-1deg);
-    box-shadow: 0px 0px 20px rgba(149, 153, 159, .16);
+    .form-formulario{
+        width: 600px;
+    }
+
+    .form-row{  
+        margin: 10px;
+    }
+
+    .form-colum label{
+        width: 50%;
+    }
+    
+    .form-colum input,
+    .form-colum input[type="text"],
+    .form-colum input[type="email"],
+    .form-colum textarea{
+        width: 50%;
+    }
 }
 
-.ticket-card.drag{
-    background: black;
-}*/
 
+/* Estilos responsivos para dispositivos móviles >=650px */
+
+@media screen and (max-width: 650px){
+    
+    .form-formulario{
+        width: 450px;
+    }
+
+    .form-row{
+        display: column;
+    }
+    
+}
 
 
 
