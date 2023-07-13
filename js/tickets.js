@@ -1,3 +1,4 @@
+
 // import { nameUser } from "./formulario"
 window.addEventListener("DOMContentLoaded", function() {
   var existingTickets = JSON.parse(localStorage.getItem("tickets")) || []
@@ -5,6 +6,7 @@ window.addEventListener("DOMContentLoaded", function() {
   existingTickets.forEach(function(ticket) {
     var ticketElement = document.createElement("div")
     ticketElement.classList.add("ticket")
+    ticketElement.id = ticket.id  
     ticketElement.innerHTML = `
       <label for="cliente"><b>Cliente</b></label>
       <label for="clienteLabel">${ticket.nameUser}</label>
@@ -23,3 +25,20 @@ window.addEventListener("DOMContentLoaded", function() {
     backlogTicket.appendChild(ticketElement)
   })
 })
+  /*
+function limpiarTicketsGenerados() {
+  localStorage.removeItem("tickets");
+  alert("Se han limpiado todos los tickets generados.");
+}
+
+document.getElementById("limpiarButton").addEventListener("click", limpiarTicketsGenerados)
+*/
+
+document.getElementById("newTicketButton").addEventListener("click", function() {
+  window.location.href = "ticketsOptions.html"
+})
+
+document.getElementById("logoutButton").addEventListener("click", function() {
+  window.location.href = "index.html"
+})
+

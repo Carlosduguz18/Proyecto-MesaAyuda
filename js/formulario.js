@@ -14,7 +14,7 @@
                 contenedorFormulario.innerHTML = data
                 contenedorFormulario.classList.remove("hidden")
                 // Establecer el valor predeterminado del campo "priority" como "high"
-                document.getElementById("priority").value = "high"
+                document.getElementById("priority").value = "urgente"
                 // Obtener el usuario logueado y asignar su valor al campo "nameUser"
                 // var usuarioLogueado = obtenerUsuario() // Función que obtiene el usuario logueado
                 // document.getElementById("nameUser").value = usuarioLogueado
@@ -26,7 +26,7 @@
                 var affairField = document.getElementById("affair")
 
                 // Obtener el usuario registrado y asignar su valor al campo "nameUser"
-                var usuarioRegistrado = obtenerUsuarioRegistrado();
+                var usuarioRegistrado = obtenerUsuarioRegistrado()
                 nameUserField.value = usuarioRegistrado
         
                 // Llenar los campos del formulario en base al botón seleccionado
@@ -67,19 +67,43 @@
                 }
       
                 // Agregar el evento de envío al formulario cargado
-                document
-                    .getElementById("form-formulario-id")
-                    .addEventListener("submit", function (e) {
-                        e.preventDefault()
-        
-                    // Resto del código para procesar el formulario enviado
+                document.getElementById("form-formulario-id").addEventListener("submit", function (e) {
+                    e.preventDefault()
+
+                    // Obtener los valores de los campos
+                    var nameUser = document.getElementById("name-user").value
+                    var email = document.getElementById("email").value
+                    var nameProject = document.getElementById("name-project").value
+                    var affair = document.getElementById("affair").value
+                    var description = document.getElementById("description").value
+                    var priority = document.getElementById("priority").value
+                    var type = document.getElementById("type").value
+                    var deadLine = document.getElementById("dead-line").value
+
+                    // Almacenar los valores en localStorage
+                    var ticket = {
+                        nameUser: nameUser,
+                        email: email,
+                        nameProject: nameProject,
+                        affair: affair,
+                        description: description,
+                        priority: priority,
+                        type: type,
+                        deadLine: deadLine,
+                        others: others
+                    }
+                    var existingTickets = JSON.parse(localStorage.getItem("tickets")) || []
+                    existingTickets.push(ticket)
+                    localStorage.setItem("tickets", JSON.stringify(existingTickets))
+
+                    if (nameUser && email && nameProject && affair && description && priority && type && deadLine) {
+                        window.location.href = 'backupTickets.html'
+                    }  
                 })
         
-                document
-                    .getElementById("cancelar-btn")
-                    .addEventListener("click", function () {
-                        cancelarTicket()
-                    })
+                document.getElementById("cancelar-btn").addEventListener("click", function () {
+                    cancelarTicket()
+                })
             })
     }
       
