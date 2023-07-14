@@ -19,12 +19,57 @@ window.addEventListener("DOMContentLoaded", function() {
 
       <label for="descripcion"><b>Descripción</b></label>
       <label for="prioridadLabel">${ticket.description}</label>
+
+      <button class="delete-button"><i class="fas fa-times"></i></button>
     `
 
     var backlogTicket = document.getElementById("dashboard1")
     backlogTicket.appendChild(ticketElement)
   })
+
+
+  // Agrega la capacidad de eliminar un ticket al hacer clic en la equis
+  var deleteButtons = document.querySelectorAll(".delete-button")
+
+  deleteButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var ticketElement = button.parentElement
+      var ticketId = ticketElement.id
+
+      Swal.fire({
+        title: '¿Estás seguro de eliminar?',
+        text: "¡No podrás revertir esto!",
+        icon: 'warning',
+        padding: '1.5rem',
+        background: '#ccc',
+        color: '#000',
+        opacity: '0.9',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          ticketElement.remove()
+
+          var existingTickets = JSON.parse(localStorage.getItem("tickets")) || []
+          var updatedTickets = existingTickets.filter(function(ticket) {
+            return ticket.id !== ticketId
+          });
+          localStorage.setItem("tickets", JSON.stringify(updatedTickets))
+          //localStorage.removeItem("tickets")
+          
+          Swal.fire(
+            'Eliminado',
+            'El ticket ha sido eliminado.',
+            'success'
+          )
+        }
+      })
+    })
+  })
 })
+
   /*
 function limpiarTicketsGenerados() {
   localStorage.removeItem("tickets");

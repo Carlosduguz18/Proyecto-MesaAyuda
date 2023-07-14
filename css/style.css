@@ -538,6 +538,26 @@ button#logoutButton {
     border: 2px dashed gray;
 }
 
+.ticket{
+    position: relative;
+}
+  
+.delete-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #555;
+    transition: color 0.3s;
+}
+  
+.delete-button:hover{
+    color: red;
+}
+
 
 /* Estilos específicos para pantallas pequeñas */
 
